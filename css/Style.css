@@ -1,0 +1,159 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+.logo{
+    width: 180px;
+    float: left;
+    margin: auto;
+}
+
+a{
+    text-decoration: none;
+    color: #000;
+}
+
+.encabezado{
+    background-color: aqua;
+    overflow: hidden;/*Oculta contenido que se sale de la caja*/
+    position: relative; /*Crear clase padre*/
+    box-shadow: 0 0 25px 0 aquamarine;
+}
+
+.contenido{
+    width: 85%;
+    margin: 0 auto;
+}
+
+.encabezado nav{
+    float: right;
+}
+
+.encabezado nav ul{
+    text-shadow: 2px 4px 6px rgb(220, 221, 255);;
+    list-style: none;
+}
+
+.encabezado nav ul li{
+    display: inline-block;
+    color: #000;
+    padding: 26px;
+    border-left: #000 1px solid;
+    font-size: 20px;
+}
+
+.encabezado li:hover{
+    color: #193f41;
+    background-color: aquamarine;
+    font-size: 21px;
+    transform: scale(1.1); /* Expansión al hacer hover */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Efecto de sombra */
+}
+
+.fondo{
+    height: 100vh;
+    background-color: skyblue;
+    border-bottom: 3px solid black;
+}
+
+.izq{
+    width: 85%;
+    float: left;
+    height: 100vh;
+    background-color: pink;
+}
+
+.der{
+    width: 15%;
+    float: right;
+    height: 100vh;
+    background-color: pink;
+}
+
+.fondo h1{
+    text-align: center;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: 35px;
+    margin-top: 2%;
+    margin-bottom: 3%;
+}
+
+.fondo h2{
+    font-size: 20px;
+    margin: 5px;
+}
+
+figure{
+    display: inline-block;
+    padding: 0;
+    width: 22%;
+    height: 35%;
+    text-align: center;
+    border: 1px solid black;
+    margin: 1%;
+}
+
+figure img{
+    width: 75%;
+    align-items: center;
+}
+
+.add{
+    display: inline-block;
+    padding: 10px 20px;
+    font-size: 16px;
+    background-color: skyblue;
+    color: black;
+    border: 3px solid black;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: transform 0.3s, box-shadow 0.3s;
+    margin: 1%;
+    margin-top: 3%;
+}
+
+.add:hover {
+    transform: scale(1.1); /* Expansión al hacer hover */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Efecto de sombra */
+}
+
+
+.product-container {
+    margin: 1%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border: 3px solid #fff;
+    border-radius: 15px;
+    padding: 10px;
+    margin-bottom: 10px;
+}
+
+.product-image {
+    flex: 1;
+    max-width: 100px;
+    margin-right: 20px;
+}
+
+.product-details {
+    flex: 2;
+}
+
+.product-title {
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+.product-price {
+    color: #007bff;
+}
+
+.cata{
+    width: 30%;
+}
+
+.bl{
+    display: flex;
+    width: 100%;
+}
