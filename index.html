@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tienda "La Tiendona XD"</title>
+    <link rel="stylesheet" href="css/Style.css">
+    <script src="js/jav.js"></script>
+</head>
+<body>
+    
+    <header class="encabezado">
+        <div class="contenido">
+            <img src="img/tienda.png" alt="Logo de la tienda" class="logo">
+            <nav>
+                <ul>
+                    <li><a href="#">Principal</a></li>
+                    <li><a href="#">Contabilidad</a></li>
+                    <li><a href="#">Almacén</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <div class="fondo">
+        <div class="contenido">
+            <div class="izq">
+                <h1>Productos</h1>
+                    <div class="product-container">
+                        <img src="img/Coca Desechable.png" alt="Producto 2" class="product-image">
+                        <div class="product-details">
+                            <div class="product-title">Producto 2</div>
+                            <div class="product-price">$24.99</div>
+                        </div>
+                    </div>
+
+                    <div class="product-container">
+                        <img src="img/Coca Desechable.png" alt="Producto 2" class="product-image">
+                        <div class="product-details">
+                            <div class="product-title">Producto 2</div>
+                            <div class="product-price">$24.99</div>
+                            <div class="add" onclick="myCart.addToCart({ name: 'Coca-cola', price: 24.99 })">+</div>
+                            <div class="Nu"><script>document.getElementById("myCart.displayCart();")</script></div>
+                        </div>
+                    </div>
+            </div>
+            
+            <div class="der">
+                <h1>Anuncios</h1>
+            </div>
+        </div>
+    </div>
+
+
+</body>
+</html>
