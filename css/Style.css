@@ -164,9 +164,13 @@ figure img{
     flex: 1;
     max-width: 140px;
     margin-right: 20px;
-    margin-left: 1px;
+}
+
+.c.product-image{
+    max-width: 90px;
+    margin: 10px 25px 10px 10px;
 }
 
 .add img{
-    width: 2vw;
+    width: 2.2vw;
 }
