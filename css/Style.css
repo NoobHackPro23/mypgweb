@@ -3,15 +3,36 @@
     padding: 0;
 }
 
-.logo{
-    width: 180px;
-    float: left;
-    margin: auto;
+body{
+    background-color: whitesmoke;
+    color: #000;
+    min-height: 100vh;
+    max-height: 100vh;
+}
+
+body.darkmode{
+    background-color: #000000dd;
+    color: white;
 }
 
 a{
     text-decoration: none;
     color: #000;
+}
+
+a.darkmode{
+    color: white;
+}
+
+.encabezado.darkmode{
+    background-color: #000;
+    box-shadow: 0 0 25px 0 #ffffffaa;
+}
+
+.logo{
+    width: 180px;
+    float: left;
+    margin: auto;
 }
 
 .encabezado{
@@ -31,7 +52,7 @@ a{
 }
 
 .encabezado nav ul{
-    text-shadow: 2px 4px 6px rgb(220, 221, 255);;
+    text-shadow: 2px 4px 6px #dcddff;;
     list-style: none;
 }
 
@@ -48,27 +69,27 @@ a{
     background-color: aquamarine;
     font-size: 21px;
     transform: scale(1.1); /* Expansión al hacer hover */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Efecto de sombra */
+    box-shadow: 0 4px 8px #00000033; /* Efecto de sombra */
 }
 
 .fondo{
-    height: 100vh;
-    background-color: skyblue;
     border-bottom: 3px solid black;
+}
+
+.fondo.darkmode{
+    border-bottom: 3px solid white;
 }
 
 .izq{
     width: 85%;
     float: left;
     height: 100vh;
-    background-color: pink;
 }
 
 .der{
     width: 15%;
     float: right;
     height: 100vh;
-    background-color: pink;
 }
 
 .fondo h1{
@@ -109,18 +130,19 @@ figure img{
     border-radius: 8px;
     cursor: pointer;
     transition: transform 0.3s, box-shadow 0.3s;
-    margin: 1%;
-    margin-top: 3%;
+    margin: 1% 0;
+    margin-top: 5px;
+    box-shadow: inset 1px -2px 3px rgba(0, 0, 0, 0.563);
 }
 
 .add:hover {
     transform: scale(1.1); /* Expansión al hacer hover */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Efecto de sombra */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2), inset 1px -2px 5px rgba(0, 0, 0, 0.648); /* Efecto de sombra */
 }
 
 
 .product-container {
-    margin: 1%;
+    margin: 1.5%;
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -128,6 +150,13 @@ figure img{
     border-radius: 15px;
     padding: 10px;
     margin-bottom: 10px;
+    box-shadow: inset 1px -2px 5px #ffffffa9;
+}
+
+.product-container:hover{
+    transform: scale(1.1);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    box-shadow: inset 1px -2px 8px #ffffffd9;
 }
 
 .product-image {
@@ -167,10 +196,21 @@ figure img{
 }
 
 .c.product-image{
-    max-width: 90px;
-    margin: 10px 25px 10px 10px;
+    max-width: 100px;
+    margin: 10px 25px;
 }
 
 .add img{
     width: 2.2vw;
+}
+
+.der a{
+    display: inline-block;
+    padding: 3%;
+    border: 2px solid black;
+    border-radius: 10px;
+}
+
+.der a.darkmode{
+    border: 2px solid white;
 }
