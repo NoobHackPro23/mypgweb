@@ -3,8 +3,12 @@
     padding: 0;
 }
 
+.contenedor{
+    color: #000;
+}
+
 body{
-    background-color: whitesmoke;
+    background-color: #f9fbe0;
     color: #000;
     min-height: 100vh;
     max-height: 100vh;
@@ -33,13 +37,14 @@ a.darkmode{
     width: 180px;
     float: left;
     margin: auto;
+    margin-left: 50px;
 }
 
 .encabezado{
-    background-color: aqua;
+    background-color: wheat;
     overflow: hidden;/*Oculta contenido que se sale de la caja*/
     position: relative; /*Crear clase padre*/
-    box-shadow: 0 0 25px 0 aquamarine;
+    box-shadow: 0 0 25px 0 wheat;
 }
 
 .contenido{
@@ -62,6 +67,7 @@ a.darkmode{
     padding: 26px;
     border-left: #000 1px solid;
     font-size: 20px;
+    transition: transform 0.3s, box-shadow 0.3s;
 }
 
 .encabezado li:hover{
@@ -87,6 +93,7 @@ a.darkmode{
 }
 
 .der{
+    display: flexbox;
     width: 15%;
     float: right;
     height: 100vh;
@@ -103,21 +110,6 @@ a.darkmode{
 .fondo h2{
     font-size: 20px;
     margin: 5px;
-}
-
-figure{
-    display: inline-block;
-    padding: 0;
-    width: 22%;
-    height: 35%;
-    text-align: center;
-    border: 1px solid black;
-    margin: 1%;
-}
-
-figure img{
-    width: 75%;
-    align-items: center;
 }
 
 .add{
@@ -141,21 +133,32 @@ figure img{
 }
 
 
-.product-container {
+.product-container{
     margin: 1.5%;
     display: flex;
     align-items: center;
     justify-content: space-between;
-    border: 3px solid #fff;
+    border: 3px solid #000;
     border-radius: 15px;
     padding: 10px;
     margin-bottom: 10px;
-    box-shadow: inset 1px -2px 5px #ffffffa9;
+    transition: transform 0.3s, box-shadow 0.3s;
+    box-shadow: inset 1px -2px 5px #000000a9;
 }
 
 .product-container:hover{
     transform: scale(1.1);
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    box-shadow: 0 4px 8px #00000033;
+    box-shadow: inset 1px -2px 8px #000000d9;
+}
+
+.product-container.darkmode{
+    border: 3px solid #fff;
+    box-shadow: inset 1px -2px 5px #ffffffa9;
+}
+
+.product-container.darkmode:hover{
+    box-shadow: 0 4px 8px #ffffff33;
     box-shadow: inset 1px -2px 8px #ffffffd9;
 }
 
@@ -189,13 +192,13 @@ figure img{
     font-size: 20px;
 }
 
-.bl .product-image{
+.bl.product-image{
     flex: 1;
     max-width: 140px;
     margin-right: 20px;
 }
 
-.c.product-image{
+.cata.product-image{
     max-width: 100px;
     margin: 10px 25px;
 }
@@ -209,8 +212,141 @@ figure img{
     padding: 3%;
     border: 2px solid black;
     border-radius: 10px;
+    font-weight: bold;
 }
 
 .der a.darkmode{
-    border: 2px solid white;
+    border: 2px solid #000000;
+    color: #000;
+}
+
+@media (max-width: 768px) {
+    .cata.product-container {
+        width: 100%; /* Ocupar todo el ancho disponible */
+    }
+
+    .cata.product-container {
+        flex-direction: column; /* Cambiar a disposición vertical */
+        align-items: flex-start; /* Alinear elementos a la izquierda */
+        height: 130%;
+        padding: 5%;
+    }
+
+    .bl .product-image {
+        max-width: 100%; /* Ajustar imagen al ancho del contenedor */
+        margin: 0 auto 10px; /* Alinear imagen al centro y agregar margen inferior */
+    }
+
+    .bl .product-details {
+        text-align: center; /* Centrar texto */
+    }
+
+    .add img {
+        width: 20px; /* Tamaño de la imagen de flecha */
+    }
+
+    .der{
+        width: 100%;
+        height: auto;
+        margin-top: 10px;
+    }
+
+    .izq{
+        width: 100%;
+        height: auto;
+    }
+}
+
+.toggle-menu-btn{
+    display: none;
+}
+
+@media (max-width: 720px) {
+
+.contenido {
+    width: 90%; /* Ocupar todo el ancho disponible */
+}
+
+.encabezado{
+    height: 70px;
+}
+
+.encabezado nav {
+    float: none; /* Quitar flotado */
+    text-align: center; /* Centrar el texto */
+}
+
+.encabezado nav ul li {
+    display: block; /* Cambiar a disposición de bloque */
+    border: none; /* Quitar borde izquierdo */
+    margin-bottom: 10px; /* Agregar espacio entre elementos */
+}
+
+.menu {
+    top: 70px; /* Ajusta según la altura del logo y el botón de menú */
+}
+    /* Estilos para el logo */
+.logo-container {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 1000; /* Asegura que esté por encima del resto del contenido */
+    padding: 10px 20px;
+}
+
+.logo {
+    max-width: 130px; /* Ajusta el tamaño según sea necesario */
+    height: auto;
+}
+
+/* Estilos para el botón de menú */
+.toggle-menu-btn {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    background-color: #007bff;
+    font-size: 20px;
+    padding: 22px 30px;
+    cursor: pointer;
+    box-sizing: border-box;
+
+    display: inline-block;
+    color: black;
+    border: 3px solid black;
+    transition: transform 0.3s, box-shadow 0.3s;
+    box-shadow: inset 1px -2px 3px rgba(0, 0, 0, 0.563);
+}
+
+.toggle-menu-btn:hover{
+    transform: scale(1.1); /* Expansión al hacer hover */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2), inset 1px -2px 5px rgba(0, 0, 0, 0.648); /* Efecto de sombra */
+}
+
+/* Estilos para el menú */
+.menu {
+    display: none; /* Por defecto oculto */
+    position: fixed;
+    top: 70px; /* Ajusta según la altura del logo */
+    left: 5%;
+    width: 60%;
+    border: 3px solid #000;
+    border-radius: 60px;
+    background-color: #f9fbe0;
+    z-index: 999; /* Asegura que esté por encima del resto del contenido */
+}
+
+.menu ul {
+    list-style: none;
+    padding: 0;
+}
+
+.menu ul li {
+    padding: 10px 15px;
+}
+
+.menu ul li:hover{
+    border-radius: 60px;
+}
+
 }
