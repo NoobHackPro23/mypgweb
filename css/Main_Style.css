@@ -1,0 +1,200 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+body{
+    background-color: #f9fbe0;
+    color: #000;
+}
+
+a{
+    text-decoration: none;
+    color: #000;
+}
+
+.logo{
+    width: 180px;
+    float: left;
+    margin: auto;
+    margin-left: 50px;
+
+    cursor: pointer;
+}
+
+.logo:hover{
+    transform: scale(1.1);
+}
+
+.encabezado{
+    background-color: wheat;
+    overflow: hidden;/*Oculta contenido que se sale de la caja*/
+    position: relative; /*Crear clase padre*/
+    box-shadow: 0 0 25px 0 wheat;
+    height: 80px;
+}
+
+.contenido{
+    width: 85%;
+    margin: auto;
+}
+
+.encabezado nav{
+    float: right;
+}
+
+.encabezado nav ul{
+    text-shadow: 2px 4px 6px #dcddff;;
+    list-style: none;
+}
+
+.encabezado nav ul li{
+    display: inline-block;
+    color: #000;
+    padding: 26px;
+    border-left: #000 1px solid;
+    font-size: 20px;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.encabezado li:hover{
+    color: #193f41;
+    background-color: aquamarine;
+    font-size: 21px;
+    transform: scale(1.1); /* Expansión al hacer hover */
+    box-shadow: 0 4px 8px #00000033; /* Efecto de sombra */
+
+    border-radius: 10px;
+}
+
+.fondo{
+    border-bottom: 3px solid black;
+}
+
+.izq{
+    float: left;
+    height: 100vh;
+    width: 100%;
+}
+
+.fondo h1{
+    text-align: center;
+    font-size: 35px;
+    margin-top: 2%;
+    margin-bottom: 3%;
+}
+
+.fondo h2{
+    font-size: 20px;
+    margin: 5px;
+}
+
+.add{
+    display: inline-block;
+    padding: 10px 20px;
+    font-size: 16px;
+    background-color: skyblue;
+    color: black;
+    border: 3px solid black;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: transform 0.3s, box-shadow 0.3s;
+    margin: 1% 0;
+    margin-top: 5px;
+    box-shadow: inset 1px -2px 3px rgba(0, 0, 0, 0.563);
+}
+
+.add:hover {
+    transform: scale(1.1); /* Expansión al hacer hover */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2), inset 1px -2px 5px rgba(0, 0, 0, 0.648); /* Efecto de sombra */
+}
+
+.product-container{
+    margin: 1.5%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border: 3px solid #000;
+    border-radius: 15px;
+    padding: 10px;
+    margin-bottom: 10px;
+    transition: transform 0.3s, box-shadow 0.3s;
+    box-shadow: inset 1px -2px 5px #000000a9;
+    overflow: hidden;
+}
+
+.product-container:hover{
+    transform: scale(1.1);
+    box-shadow: 0 4px 8px #00000033;
+    box-shadow: inset 1px -2px 8px #000000d9;
+}
+
+.product-image {
+    flex: 1;
+    max-width: 100px;
+    margin-right: 20px;
+}
+
+.product-details {
+    flex: 2;
+}
+
+.product-title {
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+.product-price {
+    color: #007bff;
+}
+
+.cata{
+    width: 30%;
+}
+
+.bl{
+    display: flex;
+    width: 100%;
+    height: 30%;
+    font-size: 20px;
+}
+
+.bl .product-image{
+    flex: 1;
+    max-width: 140px;
+    margin-right: 20px;
+}
+
+.cata .product-image{
+    max-width: 100px;
+    margin: 10px 25px;
+}
+
+.add img{
+    width: 2.2vw;
+}
+
+.der a{
+    display: inline-block;
+    padding: 3%;
+    border: 2px solid black;
+    border-radius: 10px;
+    font-weight: bold;
+}
+
+.toggle-menu-btn{
+    display: none;
+}
+
+.productos.izq{
+    display: inline-block;
+    text-align: center;
+}
+
+.productos.izq .product-container{
+    width: 42%;
+    height: 20%;
+    box-sizing: border-box;
+    display: inline-flex;
+}

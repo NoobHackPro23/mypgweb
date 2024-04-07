@@ -1,0 +1,56 @@
+body.darkmode{
+    background-color: #000000dd;
+    color: white;
+}
+
+a.darkmode{
+    color: white;
+}
+
+.encabezado.darkmode{
+    background-color: #000;
+    box-shadow: 0 0 15px 0 #ffffffaa;
+}
+
+.fondo.darkmode{
+    border-bottom: 3px solid white;
+}
+
+.product-container.darkmode{
+    border: 3px solid #fff;
+    box-shadow: inset 1px -2px 5px #ffffffa9;
+}
+
+.product-container.darkmode:hover{
+    box-shadow: 0 4px 8px #ffffff33;
+    box-shadow: inset 1px -2px 8px #ffffffd9;
+}
+
+.der a.darkmode{
+    border: 2px solid #000000;
+    color: #000;
+}
+
+.menu.darkmode{
+    background-color: #000;
+    border: 2px solid #fff;
+}
+
+.menu.darkmode ul li{
+    border: 2px solid white;
+}
+
+.menu.darkmode ul li:hover{
+    background-color: #ffffff33;
+}
+
+.toggle-menu-btn.darkmode{
+    background-color: #000;
+    color: white;
+    box-shadow: inset 1px -2px 3px #ffffffd9;
+    border: 2px solid white;
+}
+
+.toggle-menu-btn.darkmode:hover{
+    box-shadow: 0 2px 8px #ffffffa9, inset 2px -2px 5px #ffffffaa; /* Efecto de sombra */
+}
