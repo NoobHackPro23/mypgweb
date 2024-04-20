@@ -2,7 +2,7 @@ function blackMode() {
     var body = document.body;
     var links = document.getElementsByTagName('a');
     var enca = document.querySelector('.encabezado');
-    var fondo = document.querySelector('.fondo');
+    var emergente = document.querySelector(".emergente");
     var bor = document.querySelectorAll('.der a');
     var caja = document.querySelectorAll('.product-container');
 
@@ -26,7 +26,7 @@ function blackMode() {
     });
 
     body.classList.toggle("darkmode");
+    emergente.classList.toggle("darkmode");
     enca.classList.toggle("darkmode");
-    fondo.classList.toggle("darkmode");
-    bor.classList.toggle("darkmode");;
+    bor.classList.toggle("darkmode");
 }
