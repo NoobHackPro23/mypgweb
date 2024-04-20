@@ -20,5 +20,12 @@ function toggleMenu() {
 }
 
 function Inicio() {
-    location.reload();
+    window.location.href = 'index.html';
+}
+
+function Delete(delete_Box) {
+    // Obtener el contenedor padre del botón de eliminar
+    var contenedor = delete_Box.closest('.product-container');
+    // Eliminar el contenedor
+    contenedor.remove();
 }
