@@ -4,6 +4,83 @@
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
 }
 
+.shadow{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #000000aa; /* Color de fondo con transparencia */
+    backdrop-filter: blur(5px); /* Aplicar efecto de desenfoque */
+    z-index: 100; /* Asegurar que esté por encima de todo el contenido */
+}
+
+.emergente{
+    position: absolute;
+    width: 50vw;
+    height: 50vh;
+    max-width: 25vh;
+    max-height: 25vh;
+    min-width: 50vh;
+    min-height: 50vh;
+    top: calc(50% + 40px);
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.emergente{
+    background-color: #f9fbe0;
+    margin: 2% auto;
+    border: 3px solid black;
+    border-radius: 20px 20px 60% 60%;
+}
+
+.emergente .product-container{
+    width: 80%;
+    margin: 25% auto;
+}
+
+.emergente > .product-container > .product-image{
+    cursor: pointer;
+    max-width: 80px;
+    margin: 3%;
+    margin-right: 8%;
+}
+
+.emergente > .product-container > .product-image:hover{
+    transform: scale(1.2);
+    background-color: #c4f1f6;
+    border-radius: 50%;
+}
+
+.emergente > .product-container input{
+    padding: 5px 5px;
+    margin: 5px auto;
+    font-weight: bold;
+    border-top: 0px;
+    border-radius: 20px;
+    letter-spacing: 1px;
+}
+
+.emergente > .product-container input:hover{
+    background-color: #f3f3f3ff;
+}
+
+.crear{
+    background-color: transparent;
+    border: 0px solid transparent;
+    margin: 6px;
+    float: right;
+    margin-right: 45%;
+}
+
+.exit.delete.add{
+    font-weight: bold;
+    font-size: 20px;
+    float: right;
+    margin: 5%;
+}
+
 body{
     background-color: #f9fbe0;
     color: #000;
@@ -15,11 +92,10 @@ a{
 }
 
 .logo{
-    width: 180px;
+    width: 150px;
     float: left;
     margin: auto;
-    margin-left: 50px;
-
+    margin: 10px 5px 10px 20px;
     cursor: pointer;
 }
 
@@ -27,17 +103,26 @@ a{
     transform: scale(1.1);
 }
 
+.relative{
+    position: relative;
+}
+
 .encabezado{
     background-color: wheat;
-    overflow: hidden;/*Oculta contenido que se sale de la caja*/
-    position: relative; /*Crear clase padre*/
+    overflow: hidden;
+    position: fixed;
+    top: 0;
+    width: 100%;
     box-shadow: 0 0 25px 0 wheat;
     height: 80px;
+    border-bottom: 3px solid black;
+    z-index: 900;
 }
 
 .contenido{
     width: 85%;
     margin: auto;
+    margin-top: 80px;
 }
 
 .encabezado nav{
@@ -58,18 +143,17 @@ a{
     transition: transform 0.3s, box-shadow 0.3s;
 }
 
+.encabezado a{
+    padding: 7% 7px;
+}
+
 .encabezado li:hover{
     color: #193f41;
     background-color: aquamarine;
-    font-size: 21px;
     transform: scale(1.1); /* Expansión al hacer hover */
     box-shadow: 0 4px 8px #00000033; /* Efecto de sombra */
 
     border-radius: 10px;
-}
-
-.fondo{
-    border-bottom: 3px solid black;
 }
 
 .izq{
@@ -78,14 +162,14 @@ a{
     width: 100%;
 }
 
-.fondo h1{
+h1{
     text-align: center;
     font-size: 35px;
     margin-top: 2%;
     margin-bottom: 3%;
 }
 
-.fondo h2{
+h2{
     font-size: 20px;
     margin: 5px;
 }
@@ -102,12 +186,22 @@ a{
     transition: transform 0.3s, box-shadow 0.3s;
     margin: 1% 0;
     margin-top: 5px;
-    box-shadow: inset 1px -2px 3px rgba(0, 0, 0, 0.563);
+    box-shadow: inset 1px -2px 3px #00000090;
 }
 
 .add:hover {
     transform: scale(1.1); /* Expansión al hacer hover */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2), inset 1px -2px 5px rgba(0, 0, 0, 0.648); /* Efecto de sombra */
+    box-shadow: 0 4px 8px #00000033, inset 1px -2px 5px #000000a5; /* Efecto de sombra */
+}
+
+.delete{
+    background-color: #e22;
+    float: initial;
+    margin-left: 5px;
+}
+
+.delete:hover{
+    background-color: #e55;
 }
 
 .product-container{
@@ -194,7 +288,34 @@ a{
 
 .productos.izq .product-container{
     width: 42%;
-    height: 20%;
+    height: 25%;
     box-sizing: border-box;
     display: inline-flex;
+    vertical-align: middle;
+}
+
+.productos.izq .product-container .product-details{
+    float: left;
+    text-align: left;
+}
+
+.productos.izq > .product-container > .product-image{
+    border-radius: 10px;
+}
+
+.new > h3{
+    font-size: 26px;
+    margin: 5%;
+    text-decoration: overline;
+    font-style: oblique;
+    letter-spacing: 3px;
+}
+
+.new .add{
+    margin: 5%;
+    padding: 10px 20px;
+}
+
+.new .add > img{
+    width: 30px;
 }
