@@ -10,224 +10,250 @@
 </head>
 <body>
     
-<div class="contenedor">
+<div class="shadow" style="display: none;">
+    <div class="emergente">
+        <div class="exit delete add" onclick="Exit()">X</div>
+        <div class="product-container">
+        <img src="img/Añadir.png" alt="Producto.png" class="product-image" onclick="Img()">
+        <input type="file" class="addImg" style="display: none;">
+            <div class="product-details">
+                <div class="product-title">
+                    <input type="text" placeholder="Nombre del Producto" class="title">
+                </div>
+                <div class="product-price">
+                    <input type="number" placeholder="Precio del Producto" class="price">
+                </div>
+                <button class="crear"><div class="add"><img src="img/Añadir.png"></div></button>
+            </div>
+        </div>
+    </div>
+</div>
 
+<div class="relative">
     <header class="encabezado">
         <div class="logo-container">
             <img src="img/tienda.png" alt="Logo de la tienda" class="logo" onclick="Inicio()">
         </div>
+        
         <button class="toggle-menu-btn" onclick="toggleMenu()">Menú</button>
+
         <nav class="menu">
             <ul>
-                <li><a href="#" onclick="Inicio()">Principal</a></li>
+                <li><a href="index.html">Principal</a></li>
                 <li><a href="#">Contabilidad</a></li>
                 <li><a href="#">Almacén</a></li>
                 <li><a href="#" onclick="blackMode()">Modo Oscuro</a></li>
             </ul>
         </nav>
     </header>
+</div>
 
-    <div class="fondo">
-        <div class="contenido">
-            <div class="catalogo izq" id="ventanaP" style="display: block;">
-                <h1>Productos</h1>
-                <div class="bl">
-                    <div class="cata product-container">
-                        <img src="img/Bebi.png" alt="Bebidas" class="product-image">
-                        <div class="product-details">
-                            <div class="product-title">Bebidas</div>
-                            <div class="product-price">Líquidos y Aguas...</div>
-                            <div class="add" onclick="opnA()"><img src="img/Flecha.png"></div>
-                        </div>
+    <main class="contenido">
+        <div class="catalogo izq" id="ventanaP" style="display: block;">
+            <h1>Productos</h1>
+            <div class="bl">
+                <div class="cata product-container">
+                    <img src="img/Bebi.png" alt="Bebidas" class="product-image">
+                    <div class="product-details">
+                        <div class="product-title">Bebidas</div>
+                        <div class="product-price">Líquidos y Aguas...</div>
+                        <div class="add" onclick="opnA()"><img src="img/Flecha.png"></div>
                     </div>
+                </div>
 
-                    <div class="cata product-container">
-                        <img src="img/Chuche.png" alt="Golosinas" class="c product-image">
-                        <div class="product-details">
-                            <div class="product-title">Golosinas</div>
-                            <div class="product-price">Dulces y Cuches...</div>
-                            <div class="add" onclick="opnB()"><img src="img/Flecha.png"></div>
-                        </div>
+                <div class="cata product-container">
+                    <img src="img/Chuche.png" alt="Golosinas" class="c product-image">
+                    <div class="product-details">
+                        <div class="product-title">Golosinas</div>
+                        <div class="product-price">Dulces y Cuches...</div>
+                        <div class="add" onclick="opnB()"><img src="img/Flecha.png"></div>
                     </div>
+                </div>
 
-                    <div class="cata product-container">
-                        <img src="img/extras.png" alt="Domésticos" class="product-image">
-                        <div class="product-details">
-                            <div class="product-title">Domésticos</div>
-                            <div class="product-price">Limpieza y más...</div>
-                            <div class="add" onclick="opnC()"><img src="img/Flecha.png"></div>
-                        </div>
+                <div class="cata product-container">
+                    <img src="img/extras.png" alt="Domésticos" class="product-image">
+                    <div class="product-details">
+                        <div class="product-title">Domésticos</div>
+                        <div class="product-price">Limpieza y más...</div>
+                        <div class="add" onclick="opnC()"><img src="img/Flecha.png"></div>
                     </div>
                 </div>
             </div>
+        </div>
 
-            <div class="productos izq" style="display: none;" id="ventanaA">
-                <h1>Bebidas</h1>
+        <div class="productos izq" style="display: none;" id="ventanaA">
+            <h1>Bebidas</h1>
 
-                    <div class="product-container">
-                        <img src="img/Coca Desechable.png" alt="Coca-Cola 2.5L" class="product-image">
-                        <div class="product-details">
-                            <div class="product-title">Coca-Cola 2.5L</div>
-                            <div class="product-price">Q.20.00</div>
-                            <div class="add" onclick="act()"><img src="img/Añadir.png"s></div>
-                        </div>
-                    </div>
-
-                    <div class="product-container">
-                        <img src="img/Coca Desechable.png" alt="Coca-Cola 500ML" class="product-image">
-                        <div class="product-details">
-                            <div class="product-title">Coca-Cola 500ML</div>
-                            <div class="product-price">Q.5.00</div>
-                            <div class="add" onclick=""><img src="img/Añadir.png"s></div>
-                            <div class="Nu"></div>
-                        </div>
-                    </div>
-
-                    <div class="product-container">
-                        <img src="img/Coca Desechable.png" alt="Coca-Cola 354ML" class="product-image">
-                        <div class="product-details">
-                            <div class="product-title">Coca-Cola 354ML</div>
-                            <div class="product-price">Q.3.50</div>
-                            <div class="add" id="click" onclick=""><img src="img/Añadir.png"s></div>
-                        </div>
-                    </div>
-
-                    <div class="product-container">
-                        <img src="img/Coca Desechable.png" alt="Mineral 350ML" class="product-image">
-                        <div class="product-details">
-                            <div class="product-title">Mineral 350ML</div>
-                            <div class="product-price">Q.3.50</div>
-                            <div class="add" onclick="act()"><img src="img/Añadir.png"s></div>
-                        </div>
-                    </div>
-
-                    <div class="product-container">
-                        <img src="img/Coca Desechable.png" alt="Pepsi 3L" class="product-image">
-                        <div class="product-details">
-                            <div class="product-title">Pepsi 3L</div>
-                            <div class="product-price">Q.16.00</div>
-                            <div class="add" onclick=""><img src="img/Añadir.png"s></div>
-                            <div class="Nu"></div>
-                        </div>
-                    </div>
-
-                    <div class="product-container">
-                        <img src="img/Coca Desechable.png" alt="Pepsi 355ML" class="product-image">
-                        <div class="product-details">
-                            <div class="product-title">Pepsi 355ML</div>
-                            <div class="product-price">Q.2.50</div>
-                            <div class="add" onclick="act()"><img src="img/Añadir.png"s></div>
-                        </div>
-                    </div>
-
-                    <div class="product-container">
-                        <img src="img/Coca Desechable.png" alt="Rica Piña 355ML" class="product-image">
-                        <div class="product-details">
-                            <div class="product-title">Rica Piña 355ML</div>
-                            <div class="product-price">Q.2.50</div>
-                            <div class="add" onclick=""><img src="img/Añadir.png"s></div>
-                            <div class="Nu"></div>
-                        </div>
-                    </div>
-
-                    <div class="product-container">
-                        <img src="img/Coca Desechable.png" alt="Jugo Frutal 300ML" class="product-image">
-                        <div class="product-details">
-                            <div class="product-title">Jugo Frutal 300ML</div>
-                            <div class="product-price">Q.4.00</div>
-                            <div class="add" id="click" onclick=""><img src="img/Añadir.png"s></div>
-                        </div>
-                    </div>
-
-                    <div class="product-container">
-                        <img src="img/Coca Desechable.png" alt="IsoMax" class="product-image">
-                        <div class="product-details">
-                            <div class="product-title">IsoMax</div>
-                            <div class="product-price">Q.2.00</div>
-                            <div class="add" onclick="act()"><img src="img/Añadir.png"s></div>
-                        </div>
-                    </div>
-
-                    <div class="product-container">
-                        <img src="img/Coca Desechable.png" alt="Agua Pura (Bolsa)" class="product-image">
-                        <div class="product-details">
-                            <div class="product-title">Agua Pura</div>
-                            <div class="product-price">Q.0.50</div>
-                            <div class="add" onclick=""><img src="img/Añadir.png"s></div>
-                            <div class="Nu"></div>
-                        </div>
-                    </div>
-                    <br>
-
+            <div class="product-container">
+                <img src="img/Coca Desechable.png" alt="Coca-Cola 2.5L" class="product-image">
+                <div class="product-details">
+                    <div class="product-title">Coca-Cola 2.5L</div>
+                    <div class="product-price">Q.20.00</div>
+                    <div class="add" onclick=""><img src="img/Añadir.png"></div>
+                    <div class="delete add" onclick="Delete(this)"><img src="img/delete.png"></div>
+                </div>
             </div>
 
-            <div class="izq" style="display: none;" id="ventanaB">
-                <h1>Bebidas</h1>
-                    <div class="product-container">
-                        <img src="img/Coca Desechable.png" alt="Producto 2" class="product-image">
-                        <div class="product-details">
-                            <div class="product-title">Producto 2</div>
-                            <div class="product-price">$24.99</div>
-                            <div class="add" onclick="act()">+</div>
-                        </div>
-                    </div>
-
-                    <div class="product-container">
-                        <img src="img/Coca Desechable.png" alt="Producto 2" class="product-image">
-                        <div class="product-details">
-                            <div class="product-title">Producto 2</div>
-                            <div class="product-price">$24.99</div>
-                            <div class="add" onclick="">+</div>
-                            <div class="Nu"></div>
-                        </div>
-                    </div>
-
-                    <div class="product-container">
-                        <img src="img/Coca Desechable.png" alt="Producto 3" class="product-image">
-                        <div class="product-details">
-                            <div class="product-title">Producto 3</div>
-                            <div class="product-price">$24.99</div>
-                            <div class="add" id="click" onclick="">+</div>
-                        </div>
-                    </div>
+            <div class="product-container">
+                <img src="img/Coca Desechable.png" alt="Coca-Cola 500ML" class="product-image">
+                <div class="product-details">
+                    <div class="product-title">Coca-Cola 500ML</div>
+                    <div class="product-price">Q.5.00</div>
+                    <div class="add" onclick=""><img src="img/Añadir.png"></div>
+                    <div class="delete add" onclick="Delete(this)"><img src="img/delete.png"></div>
+                </div>
             </div>
 
-            <div class="izq" style="display: none;" id="ventanaC">
-                <h1>Bebidas</h1>
-                    <div class="product-container">
-                        <img src="img/Coca Desechable.png" alt="Producto 2" class="product-image">
-                        <div class="product-details">
-                            <div class="product-title">Producto 2</div>
-                            <div class="product-price">$24.99</div>
-                            <div class="add" onclick="act()">+</div>
-                        </div>
-                    </div>
+            <div class="product-container">
+                <img src="img/Coca Desechable.png" alt="Coca-Cola 354ML" class="product-image">
+                <div class="product-details">
+                    <div class="product-title">Coca-Cola 354ML</div>
+                    <div class="product-price">Q.3.50</div>
+                    <div class="add" id="click" onclick=""><img src="img/Añadir.png"></div>
+                    <div class="delete add" onclick="Delete(this)"><img src="img/delete.png"></div>
+                </div>
+            </div>
 
-                    <div class="product-container">
-                        <img src="img/Coca Desechable.png" alt="Producto 2" class="product-image">
-                        <div class="product-details">
-                            <div class="product-title">Producto 2</div>
-                            <div class="product-price">$24.99</div>
-                            <div class="add" onclick="">+</div>
-                            <div class="Nu"></div>
-                        </div>
-                    </div>
+            <div class="product-container">
+                <img src="img/Coca Desechable.png" alt="Mineral 350ML" class="product-image">
+                <div class="product-details">
+                    <div class="product-title">Mineral 350ML</div>
+                    <div class="product-price">Q.3.50</div>
+                    <div class="add" onclick=""><img src="img/Añadir.png"></div>
+                    <div class="delete add" onclick="Delete(this)"><img src="img/delete.png"></div>
+                </div> 
+            </div>
 
-                    <div class="product-container">
-                        <img src="img/Coca Desechable.png" alt="Producto 3" class="product-image">
-                        <div class="product-details">
-                            <div class="product-title">Producto 3</div>
-                            <div class="product-price">$24.99</div>
-                            <div class="add" id="click" onclick="">+</div>
-                        </div>
-                    </div>
+            <div class="product-container">
+                <img src="img/Coca Desechable.png" alt="Pepsi 3L" class="product-image">
+                <div class="product-details">
+                    <div class="product-title">Pepsi 3L</div>
+                    <div class="product-price">Q.16.00</div>
+                    <div class="add" onclick=""><img src="img/Añadir.png"></div>
+                    <div class="delete add" onclick="Delete(this)"><img src="img/delete.png"></div>
+                </div>
+            </div>
+
+            <div class="product-container">
+                <img src="img/Coca Desechable.png" alt="Pepsi 355ML" class="product-image">
+                <div class="product-details">
+                    <div class="product-title">Pepsi 355ML</div>
+                    <div class="product-price">Q.2.50</div>
+                    <div class="add" onclick=""><img src="img/Añadir.png"></div>
+                    <div class="delete add" onclick="Delete(this)"><img src="img/delete.png"></div>
+                </div>
+            </div>
+
+            <div class="product-container">
+                <img src="img/Coca Desechable.png" alt="Rica Piña 355ML" class="product-image">
+                <div class="product-details">
+                    <div class="product-title">Rica Piña 355ML</div>
+                    <div class="product-price">Q.2.50</div>
+                    <div class="add" onclick=""><img src="img/Añadir.png"></div>
+                    <div class="delete add" onclick="Delete(this)"><img src="img/delete.png"></div>
+                </div>
+            </div>
+
+            <div class="product-container">
+                <img src="img/Coca Desechable.png" alt="Jugo Frutal 300ML" class="product-image">
+                <div class="product-details">
+                    <div class="product-title">Jugo Frutal 300ML</div>
+                    <div class="product-price">Q.4.00</div>
+                    <div class="add" id="click" onclick=""><img src="img/Añadir.png"></div>
+                    <div class="delete add" onclick="Delete(this)"><img src="img/delete.png"></div>
+                </div>
+            </div>
+
+            <div class="product-container">
+                <img src="img/Coca Desechable.png" alt="IsoMax" class="product-image">
+                <div class="product-details">
+                    <div class="product-title">IsoMax</div>
+                    <div class="product-price">Q.2.00</div>
+                    <div class="add" onclick=""><img src="img/Añadir.png"></div>
+                    <div class="delete add" onclick="Delete(this)"><img src="img/delete.png"></div>
+                </div>
+            </div>
+
+            <div class="product-container">
+                <img src="img/Coca Desechable.png" alt="Agua Pura (Bolsa)" class="product-image">
+                <div class="product-details">
+                    <div class="product-title">Agua Pura</div>
+                    <div class="product-price">Q.0.50</div>
+                    <div class="add" onclick=""><img src="img/Añadir.png"></div>
+                    <div class="delete add" onclick="Delete(this)"><img src="img/delete.png"></div>
+                </div>
+            </div> <br>
+            <div class="new product-container">
+                <h3>Nueva Bebida</h3>
+                <div class="product-details">
+                    <div class="add" onclick="add(this)"><img src="img/Añadir.png"></div>
+                </div>
             </div>
         </div>
-    </div>
 
-</div>
+        <div class="productos izq" style="display: none;" id="ventanaB">
+            <h1>Golosinas</h1>
+            <div class="product-container">
+                <img src="img/Coca Desechable.png" alt="Producto 2" class="product-image">
+                <div class="product-details">
+                    <div class="product-title">Producto 2</div>
+                    <div class="product-price">$24.99</div>
+                    <div class="add" onclick="">+</div>
+                </div>
+            </div>
+
+            <div class="product-container">
+                <img src="img/Coca Desechable.png" alt="Producto 2" class="product-image">
+                <div class="product-details">
+                    <div class="product-title">Producto 2</div>
+                    <div class="product-price">$24.99</div>
+                    <div class="add" onclick="">+</div>
+                </div>
+            </div>
+
+            <div class="product-container">
+                <img src="img/Coca Desechable.png" alt="Producto 3" class="product-image">
+                <div class="product-details">
+                    <div class="product-title">Producto 3</div>
+                    <div class="product-price">$24.99</div>
+                    <div class="add" id="click" onclick="">+</div>
+                </div>
+            </div>
+        </div>
+
+        <div class="productos izq" style="display: none;" id="ventanaC">
+            <h1>Bebidas</h1>
+            <div class="product-container">
+                <img src="img/Coca Desechable.png" alt="Producto 2" class="product-image">
+                <div class="product-details">
+                    <div class="product-title">Producto 2</div>
+                    <div class="product-price">$24.99</div>
+                    <div class="add" onclick="act()">+</div>
+                </div>
+            </div>
+
+            <div class="product-container">
+                <img src="img/Coca Desechable.png" alt="Producto 2" class="product-image">
+                <div class="product-details">
+                    <div class="product-title">Producto 2</div>
+                    <div class="product-price">$24.99</div>
+                    <div class="add" onclick="">+</div>
+                </div>
+            </div>
+
+            <div class="product-container">
+                <img src="img/Coca Desechable.png" alt="Producto 3" class="product-image">
+                <div class="product-details">
+                    <div class="product-title">Producto 3</div>
+                    <div class="product-price">$24.99</div>
+                    <div class="add" id="click" onclick="">+</div>
+                </div>
+            </div>
+        </div>
+    </main><!--Contenido-->
 
 <script src="js/Main.js"></script>
 <script src="js/Black_mode.js"></script>
+<script src="js/add.js"></script>
 </body>
 </html>
