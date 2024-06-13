@@ -1,0 +1,89 @@
+.product-container{
+    margin: 1.5%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border: 3px solid #000;
+    border-radius: 15px;
+    padding: 10px;
+    margin-bottom: 10px;
+    transition: transform 0.3s, box-shadow 0.3s;
+    box-shadow: inset 1px -2px 5px #000000a9;
+    overflow: hidden;
+    gap: 1%;
+}
+
+.product-container:hover{
+    transform: scale(1.1);
+    box-shadow: 0 4px 8px #00000033;
+    box-shadow: inset 1px -2px 8px #000000d9;
+}
+
+.product-image {
+    flex: 1;
+    max-width: 100px;
+    margin-right: 20px;
+}
+
+.product-details {
+    flex: 2;
+    height: auto;
+}
+
+.product-title {
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+.product-price {
+    color: #007bff;
+}
+
+.cata{
+    width: 30%;
+}
+
+.bl{
+    display: flex;
+    width: 100%;
+    height: 30%;
+    font-size: 20px;
+}
+
+.bl .product-image{
+    flex: 1;
+    max-width: 140px;
+    margin-right: 20px;
+}
+
+.cata .product-image{
+    max-width: 100px;
+    margin: 10px 25px;
+}
+
+.productos.izq .product-container{
+    position: relative;
+    width: 42%;
+    height: 25%;
+    box-sizing: border-box;
+    display: inline-flex;
+    vertical-align: middle;
+}
+
+.productos.izq .product-container .product-details{
+    float: left;
+    text-align: left;
+}
+
+.productos.izq > .product-container > .product-image{
+    border-radius: 10px;
+    max-height: 85%;
+    align-self: last baseline;
+}
+
+.product-storage{
+    position: absolute;
+    top: 8px;
+    left: 11px;
+    font-weight: bold;
+}

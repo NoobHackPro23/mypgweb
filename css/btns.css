@@ -1,0 +1,45 @@
+
+.add{
+    display: inline-block;
+    padding: 10px 20px;
+    font-size: 16px;
+    background-color: skyblue;
+    color: black;
+    border: 3px solid black;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: transform 0.3s, box-shadow 0.3s;
+    margin: 5px 15px 5px 0;
+    box-shadow: inset 1px -2px 3px #00000090;
+}
+
+.add:hover {
+    transform: scale(1.1);
+    box-shadow: 0 4px 8px #00000033, inset 1px -2px 5px #000000a5; /* Efecto de sombra */
+}
+
+.delete.add{
+    background-color: #e22;
+}
+
+.delete:hover{
+    background-color: #e55;
+}
+
+.add img{
+    width: 2.2vw;
+}
+
+.toggle-menu-btn{
+    display: none;
+}
+
+.productos.izq{
+    display: inline-block;
+    text-align: center;
+}
+
+.new .add{
+    margin: 5%;
+    padding: 10px 20px;
+}
